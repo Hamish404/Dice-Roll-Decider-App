@@ -1,0 +1,161 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: bisque
+}
+
+.container {
+  height: 90vh;
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    120deg,
+    rgba(245, 245, 220, 0.9),
+    rgba(240, 229, 216, 0.9),
+    rgba(231, 216, 193, 0.9),
+    rgba(218, 201, 176, 0.9)
+  );
+  box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  border-radius: 31px;
+}
+
+.title {
+  position: absolute;
+  top: 8%;
+  font-size: 300%;
+}
+
+.winner {
+  position: absolute;
+  top: 22%;
+  font-weight: bold;
+  font-size: 200%;
+}
+
+.player-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes rotateDice {
+  0% {
+    transform: rotate(0deg);
+  }
+  33% {
+    transform: rotate(400deg);
+  }
+  66% {
+    transform: rotate(340deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateDiceReverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  33% {
+    transform: rotate(-400deg);
+  }
+  66% {
+    transform: rotate(-340deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.dice {
+  height: 350px;
+  width: 350px;
+  border: 2px solid black;
+  border-radius: 31px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  margin: 100px 100px 0px 100px;
+  position: relative;
+  transition: transform 0.3s ease-in-out, background-color 0.8s ease;
+}
+
+.dice:hover {
+  transform: scale(1.1);
+}
+
+.vs {
+  font-weight: bold;
+  font-size: 200%;
+}
+
+.player-text {
+  font-weight: bold;
+  font-size: 200%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.row {
+  height: 33.33%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.dice-dot {
+  border: 2px solid black;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: inset 0px -4px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.dice-dot:hover {
+  background-color: black;
+}
+
+button {
+  position: absolute;
+  bottom: 15%;
+  font-weight: bold;
+  font-size: 200%;
+  border: 2px solid black;
+  padding: 25px 50px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: inset 0px -4px 10px rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  letter-spacing: 2px;
+}
+
+button:hover {
+  background-color: white;
+  transform: scale(1.1);
+}
+
+.display-none {
+  display: none;
+}
+
+.hide {
+  visibility: hidden;
+}

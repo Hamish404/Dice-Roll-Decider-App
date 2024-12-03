@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dice-Roll-App</title>
+  <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+  <div class="container">
+
+    <div class="title">
+      <h1>Decision Deathmatch</h1>
+    </div>
+
+    <p class="winner"></p>
+
+    <div class="player-container">
+      <div class="dice dice-1">
+        <div class="row row-1">
+          <div class="dice-dot dot-2 hide"></div>
+          <div class="dice-dot dot-4 hide"></div>
+        </div>
+        <div class="row row-2">
+          <div class="dice-dot dot-1"></div>
+          <div class="dice-dot dot-6 hide display-none"></div>
+        </div>
+        <div class="row row-3">
+          <div class="dice-dot dot-3 hide"></div>
+          <div class="dice-dot dot-5 hide"></div>
+        </div>
+      </div>
+      <p class="player-text player-1">Player One</p>
+    </div>
+
+    <p class="vs">VS</p>
+
+    <div class="player-container">
+      <div class="dice dice-2">
+        <div class="row row-1">
+          <div class="dice-dot dot-2 hide"></div>
+          <div class="dice-dot dot-4 hide"></div>
+        </div>
+        <div class="row row-2">
+          <div class="dice-dot dot-1"></div>
+          <div class="dice-dot dot-6 hide display-none"></div>
+        </div>
+        <div class="row row-3">
+          <div class="dice-dot dot-3 hide"></div>
+          <div class="dice-dot dot-5 hide"></div>
+        </div>
+      </div>
+      <p class="player-text player-2">Player Two</p>
+    </div>
+
+    <button class="roll-btn">Re-roll</button>
+
+  </div>
+
+  <script src="/index.js"></script>
+</body>
+</html>
